@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Notes App | Modern Grid Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Your Notes App</h2>
+    </nav>
+
+    <div class="notes-container">
+        <div class="control-card add-box" id="open-modal-btn">
+            <div class="icon-circle">
+                <i class="fas fa-plus"></i>
+            </div>
+            <p>Add new Task</p>
+        </div>
+
+        <div class="control-card delete-box" id="clear-all-btn">
+            <div class="icon-circle delete-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <p>Delete All</p>
+        </div>
+
+        <div id="dynamic-notes" class="grid-bridge"></div>
+    </div>
+
+    <div class="modal-wrapper" id="note-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add a New Note</h3>
+                <i class="fas fa-times" id="close-modal-btn"></i>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="note-title" placeholder="Note Title...">
+                <textarea id="note-desc" rows="5" placeholder="Write your note description here..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="save-note-btn">Save Note</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
